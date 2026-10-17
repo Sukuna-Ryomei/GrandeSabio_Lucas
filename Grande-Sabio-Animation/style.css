@@ -1,0 +1,93 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #050816;
+   
+
+.brilho {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow:
+        0 0 15px #ffffff,
+        0 0 35px #00bfff,
+        0 0 60px #4169e1;
+    z-index: 2;
+    animation: brilhoAnim 10s linear infinite,pulsar 2s ease-in-out infinite;
+}
+}
+
+span.ponta {
+    position: absolute;
+    width: 3px;
+    height: 70px;
+    top: 50%;
+    left: 50%;
+    background-color: #dffaff;
+    border-radius: 50%;
+    box-shadow:
+        0 0 4px #ffffff,
+        0 0 12px #00bfff,
+        0 0 25px #4169e1;
+    transform-origin: center;
+    z-index: -1;
+}
+
+span.ponta:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg);
+    height: 250px;
+    
+
+}
+
+span.ponta:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 415px;
+}
+
+span.ponta:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(90deg);
+    height: 160px;
+}
+
+span.ponta:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(135deg);
+    height: 240px;
+}
+
+    
+
+@keyframes brilhoAnim {
+    0% {
+        box-shadow:
+            0 0 15px #ffffff,
+            0 0 35px #00bfff,
+            0 0 60px #4169e1;
+    }
+    50% {
+        box-shadow:
+            0 0 30px #ffffff,
+            0 0 70px #00bfff,
+            0 0 120px #4169e1;
+    }
+    100% {
+        box-shadow:
+            0 0 15px #ffffff,
+            0 0 35px #00bfff,
+            0 0 60px #4169e1;
+    }
+}
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
